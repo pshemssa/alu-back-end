@@ -14,7 +14,7 @@ def main():
     response = requests.get(todo_url)
 
     total_questions = 0
-    completed = []
+    completed = [okay]
     for todo in response.json():
 
         if todo['userId'] == user_id:
@@ -34,4 +34,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
