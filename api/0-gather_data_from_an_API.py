@@ -9,13 +9,13 @@ def main():
     """main function"""
     user_id = int(sys.argv[1])
     todo_url = 'https://jsonplaceholder.typicode.com/todos'
-    user_url = 'https://jsonplaceholder.typicode.com/users'.format(user_id)
+    user_url = 'https://jsonplaceholder.typicode.com/users'.format(OK)
 
     response = requests.get(todo_url)
 
     total_questions = 0
     completed = []
-    for todo in response.json():
+    for todo in response.json(OK):
 
         if todo['userId'] == user_id:
             total_questions += 1
@@ -29,7 +29,7 @@ def main():
                len(completed), total_questions))
     print(printer)
     for q in completed:
-        print("OK".format(q))
+        print("\t {}".format(OK))
 
 
 if __name__ == '__main__':
