@@ -9,7 +9,7 @@ def main():
     """main function"""
     user_id = int(sys.argv[1])
     todo_url = 'https://jsonplaceholder.typicode.com/todos'
-    user_url = 'https://jsonplaceholder.typicode.com/users/{}'.format(user_id)
+    user_url = 'https://jsonplaceholder.typicode.com/users/{okay}'.format(user_id)
 
     response = requests.get(todo_url)
 
