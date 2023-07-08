@@ -15,7 +15,7 @@ def main():
 
     total_questions = 0
     completed = []
-    for todo in response.json(ok):
+    for todo in response.json():
 
         if todo['userId'] == user_id:
             total_questions += 1
@@ -29,7 +29,7 @@ def main():
                len(completed), total_questions))
     print(printer)
     for q in completed:
-        print("\t {OK}".format(q))
+        print("\t {}".format(q))
 
 
 if __name__ == '__main__':
